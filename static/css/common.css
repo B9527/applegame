@@ -1,0 +1,101 @@
+@charset "utf-8";
+/* CSS Document */
+html{border:none; margin:0px; padding:0px;-webkit-text-size-adjust:none;}
+body{border:none; margin:0px; padding:0px; font-size:12px; font-family:'Microsoft YaHei',Arial,"宋体",Helvetica,sans-serif; color:#474747; background: #fdfdfd;}
+div, span, label, cite, b, font, img, a, h1, h2, h3, h4, h5, h6, table, tbody, tr, td, th, form, p,dl,dt,dd,ul,ol,li,input,textarea{border:none; margin:0px; padding:0px;  }
+table{ border-collapse: collapse;table-layout:fixed; font-size: 12px;}
+li{ list-style-type:none; }
+em,i{ font-style:normal;}
+textarea,input{ color: #666;}
+textarea{overflow:auto;vertical-align:top}
+input,select,label,button{font-family:'Microsoft YaHei',Arial,"宋体",Helvetica,sans-serif; font-size: 12px; }
+/*伪类*/
+*, *:active, *:focus {outline: 0;outline-style: none;outline-width: 0;-moz-outline-width: 0;-webkit-tap-highlight-color: rgba(0,0,0,0);}
+a{ color: #505050;}
+a:link {text-decoration: none ;}
+a:visited {text-decoration: none}
+a:hover { text-decoration: none; color: #537aaa;}
+a:focus{outline:none;}
+a:active,a:hover{outline:0}
+.a-blue{ color: #537aaa!important;text-decoration: underline!important;}
+.a-default{cursor: default; color: #ccc!important}
+/*鼠标状态*/
+.default{cursor: default;}
+.pointer{cursor: pointer;}
+/*浮动*/
+.cl{clear:both;zoom:1;}
+.cl:after{clear:both; height:0; content:' '; display:block; visibility:hidden;zoom:1;}
+.fl{float:left!important;}
+.fr{float:right!important;}
+/**/
+.block{ display: block!important;}
+.none{ display: none;}
+/**/
+.text-left{ text-align: left!important;}
+.text-right{ text-align: right!important;}
+.text-center{ text-align: center!important;}
+/*标题样式*/
+h1{font-size: 24px;}
+h2{font-size: 22px;}
+h3{font-size: 20px;}
+h4{font-size: 18px;}
+h5{font-size: 16px;}
+h6{font-size: 14px;}
+/*定位*/
+.position-r{ position: relative;}
+.position-a{ position: absolute;}
+/*外间距*/
+.mg{margin: 0 auto;}
+.ml-5{ margin-left: 5px!important;}
+.mg-10{ margin: 10px!important;}
+.mt-10{ margin-top: 10px!important;}
+.mb-10{ margin-bottom: 10px!important;}
+.ml-10{ margin-left: 10px!important;}
+.mr-10{ margin-right: 10px!important;}
+.mt-20{ margin-top: 20px!important;}
+.mg-20{ margin: 20px!important;}
+/*内间距*/
+.pd-5{ padding: 5px!important;}
+.pd-10{ padding: 10px!important;}
+.pd-20{ padding: 20px!important;}
+.pd-30{ padding: 30px!important;}
+.pt-10{ padding-top: 10px!important;}
+.pt-20{ padding-top: 20px!important;}
+.pb-20{ padding-bottom: 20px!important;}
+/*阴影*/
+.shadow {background-color: #FFFFFF;border:1px solid #ddd;filter: progid:DXImageTransform.Microsoft.Shadow(color=#d5d5d5, strength=3, direction=135);box-shadow: 0px 1px 4px #d5d5d5;-moz-box-shadow: 0px 1px 4px #d5d5d5;-webkit-box-shadow: 0px 1px 4px #d5d5d5;}
+/*省略*/
+.ellipsis-sp{width:100%;overflow:hidden;display:block;-ms-text-overflow: ellipsis;-o-text-overflow: ellipsis;-webkit-text-overflow: ellipsis;text-overflow: ellipsis;white-space: nowrap;}
+
+/*宽度*/
+.width-m{ width: 1200px; margin: 0 auto;}
+.width-0{ width: 100%;}
+.width-05{ width: 50%;}
+.width-20{ width: 20px!important;}
+.width-50{ width: 50px!important;}
+.width-80{ width: 80px!important;}
+.width-95{ width: 95px!important;}
+.width-100{ width: 100px!important;}
+.width-150{ width: 150px!important;}
+.width-199{ width: 199px!important;}
+.width-200{ width: 200px!important;}
+.width-250{ width: 250px!important;}
+.width-300{ width: 300px!important;}
+.width-400{ width: 400px!important;}
+.width-800{ width: 800px!important;}
+
+/*高度*/
+.height-20{ height: 20px!important; line-height: 20px!important;}
+.height-30{ height: 30px!important; line-height: 30px!important;}
+.height-40{ height: 40px!important; line-height: 40px!important;}
+.height-50{ height: 50px!important; line-height: 50px!important;}
+.height-60{ height: 60px!important; line-height: 60px!important;}
+
+.height-100{ height: 100px!important;}
+.height-170{ height: 170px!important;}
+/*颜色*/
+.color-blue{ color: #537aaa!important;}
+.color-green{ color: #4ba65a!important;}
+.color-gray{ color: #999999!important;}
+.color-red{ color: #f23d3d!important;}
+/**/

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0, width=device-width,target-densitydpi=device-dpi"/>
+	    <script type="text/javascript" src="/static/js/jquery.min.js"></script>
+		<title>抢一个平安果,送个最心爱的Ta</title>
+		<style>
+			body{
+				background-image: url("/static/image/bg-ch.jpg");
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+			.BOX{
+				width: 92%;
+				margin: auto;
+				padding-top: 40px;
+				padding-left: 10px;
+				padding-right: 10px;
+				/*padding-bottom: 20px;*/
+				background-color: rgba(0,0,0,0.2);
+				border-radius: 5px;
+			}
+			.group{
+				height: 45px;
+				margin-top: 5px;
+				position: relative;
+			}
+			span{
+				color: white;
+				font-size: 20px;
+				height: 44px;
+				line-height: 44px;
+			}
+			.group input{
+				position: absolute;
+				left: 80px;
+				height: 40px;
+				top: 1px;
+				width: calc(100% - 100px);
+				font-size: 16px;
+				border: 1px solid #c2c2c2;
+				outline: none;
+			}
+			.group-area textarea{
+				height: 60px;
+				width: calc(100% - 10px);
+				font-size: 16px;
+				border: 1px solid #c2c2c2;
+				outline: none;
+			}
+			.button{
+				font-size: 24px;
+				color: white;
+				background-color: #f6aa08;
+				text-align: center;
+				height: 44px;
+				line-height: 44px;
+				width: 200px;
+				margin: auto;
+				border-radius: 5px;
+				margin-top: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="BOX">
+			<p class="group">
+				<span>姓&nbsp;&nbsp;&nbsp;&nbsp;名:</span>
+				<input id="username" type="text" placeholder="请输入您的姓名(必填)" />
+			</p>
+			<p class="group">
+				<span>手机号:</span>
+				<input id="telphone" type="tel" placeholder="请输入您的手机号(必填)" maxlength="11" />
+			</p>
+			<p class="group-area">
+				<span>邮寄地址:(仅限武汉市城区)</span>
+				<br />
+				<textarea id="address" placeholder="请输入您的邮寄地址(必填)"></textarea>
+			</p>
+			<p class="group">
+				<span>备&nbsp;&nbsp;&nbsp;&nbsp;注:</span>
+				<input id="beizhu" type="text" placeholder="请输入您的备注信息" />
+			</p>
+			<br />
+		</div>
+		<div class="button" onclick="sendData()">提交</div>
+	</body>
+	<script>
+		var username = document.getElementById('username');
+		var telphone = document.getElementById("telphone");
+		var address = document.getElementById('address');
+		var beizhu = document.getElementById('beizhu');
+		// 读取cookie里面的数据
+		function getCookie(name)
+		{
+			var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+			if(arr=document.cookie.match(reg))
+				return unescape(arr[2]);
+			else
+				return 0;
+		}
+		// 提交按钮点击事件
+		function sendData(){
+			// 获取用户分数
+{#			var user_score = getCookie("user_score");#}
+{#			alert('user_score = ' + user_score);#}
+            var user_score = localStorage.getItem('user_score');
+			console.log(user_score);
+			var jsonData = [
+				{
+					"name": username.value,
+					"phone": telphone.value,
+					"address": address.value,
+					"add_more": beizhu.value,
+					"surplus_apple": '9999',
+					"score": user_score
+				}
+			]
+//			var res = '300,Sorry!奖品发放完毕😂,900';
+			if (checkPhone()) {
+				$.ajax({
+					url: "{% url 'user_info' %}",
+					data: JSON.stringify(jsonData),
+					async:true,    //或false,是否异步
+					dataType: 'text', //服务器返回json格式数据
+					type: 'post', //HTTP请求类型
+					timeout: 10000, //超时时间设置为10秒；
+					beforeSend: function() {},
+					success: function(res) {
+{#						alert('服务器返回 = ' + res);#}
+						var resArr = res.split(',');
+						if (resArr[0] == '100') { // 领取成功
+							alert("恭喜你领取成功!");
+							// 返回首页
+							window.location.href = {% url 'home' %};
+						}else if(resArr[0] == '200'){ // 该手机号已经领取过
+							alert(resArr[1]);
+							// 返回首页
+							window.location.href = {% url 'home' %};
+						}else if(resArr[0] == '300'){ // Sorry!奖品发放完毕
+							alert(resArr[1]);
+							// 返回首页
+							window.location.href = {% url 'home' %};
+						}
+					},
+					error: function(xhr, type, errorThrown) {
+						alert('网络连接错误，请检查网络');
+					}
+				});
+			}
+		}
+		// 数据效验
+		function checkPhone(){
+			var re = /^1\d{10}$/;
+			// 姓名
+			if (username.value.trim().length === 0) {
+				alert("请输入姓名") /*姓名不能为空*/
+				return false;
+			}else if (telphone.value.length < 11 || (!re.test(telphone.value))) { // 手机号格式
+				alert("手机号格式不正确") /*手机号格式不正确*/
+				return false;
+			}else if (address.value.trim().length === 0) { // 邮寄地址
+				alert("请填写邮寄地址") /*邮寄地址不能为空*/
+				return false;
+			}else{
+				return true;
+			}
+		}
+	</script>
+</html>

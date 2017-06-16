@@ -1,0 +1,130 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+        <title>你抢我，抢到我，一元就能带走我~</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<link href={% static "css/base.css" %} rel="stylesheet" />
+		<link href={% static "css/new_file.css" %} rel="stylesheet" />
+		<script>
+			(function (doc, win) {
+		  		var docEl = doc.documentElement,
+		    		resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+		    		recalc = function () {
+		      			var clientWidth = docEl.clientWidth;
+		      			if (!clientWidth) return;
+		      			docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+		   		 };
+		
+		  		if (!doc.addEventListener) return;
+		 		win.addEventListener(resizeEvt, recalc, false);
+		  		doc.addEventListener('DOMContentLoaded', recalc, false);
+		    })(document, window);
+		</script>
+	</head>
+	<body>
+		<div class="header">
+			<img src={% static "images/new_year1.jpg" %} />
+			<div class="pos">
+				<img src={% static "images/new_year2.png" %} />
+			</div>
+		</div>
+		<div class="content">
+			<div class="activity">
+				<a href="https://hd.faisco.cn/12425701/3/load.html?style=0"><img src={% static "images/new_year3.png" %} /></a>
+			</div>
+			<div class="ticket">
+				<img src={% static "images/new_year4.jpg" %} />
+			</div>
+			<div class="feature">
+				<div class="page">
+					<div class="item">
+						<h2>Mr.Jack精选套餐</h2>
+						<div class="item-one">
+							<h2>套餐1</h2>
+							<div class="present">
+								<div>
+									<img src={% static "images/new_year11.png" %} />
+									<p>阿克苏冰糖心苹果13斤/箱</p>
+								</div>
+								<div class="plus">+</div>
+								<div>
+									<img src={% static "images/new_year7.png" %} />
+									<p class="spe">美国进口黑提1斤</p>
+								</div>
+							</div>
+							<div class="bottom">
+								<div class="spe">原价<span>100.5元</span></div>
+								<div>领券价<span>85.5元</span></div>
+								<div class="buy"><a href="https://h5.koudaitong.com/v2/ump/packagebuy?alias=4org4ilu&kdt_id=18533373"> <img src={% static "images/new_year8.png" %} /></a></div>
+							</div>
+						</div>
+						<div class="item-one">
+							<h2>套餐2</h2>
+							<div class="present">
+								<div>
+									<img src={% static "images/new_year9.png" %} />
+									<p class="conduct-1">桑缇娜车厘子500g</p>
+								</div>
+								<div class="plus">+</div>
+								<div class="item-li">
+									<img src={% static "images/new_year10.png" %} />
+									<p class="spe">厄瓜多尔白虾3斤半/盒</p>
+								</div>
+							</div>
+							<div class="bottom">
+								<div class="spe">原价<span>202元</span></div>
+								<div>领券价<span>162元</span></div>
+								<div class="buy"><a href="https://h5.koudaitong.com/v2/ump/packagebuy?alias=glzawsw9&kdt_id=18533373"> <img src={% static "images/new_year8.png" %} /></a></div>
+							</div>
+						</div>
+						<div class="item-one">
+							<h2>套餐3</h2>
+							<div class="present">
+								<div>
+									<img src={% static "images/new_year6.png" %} />
+									<p>阿克苏冰糖心苹果约10斤/箱</p>
+								</div>
+								<div class="plus">+</div>
+								<div>
+									<img src={% static "images/new_year12.png" %} />
+									<p class="spe conduct-2">船冻阿根廷红虾L1 4斤/盒</p>
+								</div>
+							</div>
+							<div class="bottom">
+								<div class="spe">原价<span>214元</span></div>
+								<div>领券价<span>174元</span></div>
+								<div class="buy"><a href="https://h5.koudaitong.com/v2/ump/packagebuy?alias=12k4zcky3&kdt_id=18533373"><img src={% static "images/new_year8.png" %} /></a></div>
+							</div>
+						</div>
+						<div class="item-one" id="item-two">
+							<h2>套餐4</h2>
+							<div class="present present1">
+								<div>
+									<img src={% static "images/new_year13.png" %} />
+									<p class="conduct-3">王牌库尔勒香梨16斤/箱</p>
+								</div>
+								<div class="plus">+</div>
+								<div>
+									<img src={% static "images/new_year14.png" %} class="spe"/>
+									<p class="spe conduct-4">厄瓜多尔白虾3斤半/盒</p>
+								</div>
+								<div class="plus2">+</div>
+								<div class="item-li2">
+									<img src={% static "images/new_year15.png" %} />
+									<p class="spe">桑缇娜车厘子5斤</p>
+								</div>
+							</div>
+							<div class="bottom" id="bottom1">
+								<div class="spe">原价<span>535元</span></div>
+								<div>领券价<span>435元</span></div>
+								<div class="buy"><a href="https://h5.koudaitong.com/v2/ump/packagebuy?alias=z8ivmq5v&kdt_id=18533373"> <img src={% static "images/new_year8.png" %} /></a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

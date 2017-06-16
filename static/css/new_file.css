@@ -1,0 +1,205 @@
+.header {
+	width: 100%;
+	position: relative;
+}
+
+.header img {
+	width: 100%;
+	height: 5.21rem;
+}
+
+.header .pos {
+	position: absolute;
+	top: 0.53rem;
+	left: 2.94rem;
+}
+
+.header .pos img {
+	width: 3.32rem;
+	height: 2.27rem;
+}
+
+.content {
+	width: 100%;
+}
+
+.activity img {
+	width: 100%;
+	height: 2.76rem;
+}
+
+.ticket img {
+	width: 100%;
+	height: 6.32rem;
+}
+
+.feature {
+	width: 100%;
+	height: 17.58rem;
+	background: #ef282b;
+	padding: 0.18rem;
+	box-sizing: border-box;
+}
+
+.feature .page {
+	background: #f96b63;
+	height: 17.12rem;
+	border: 0.1rem solid #f96b63;
+	border-radius: 0.13rem;
+	padding: 0.2rem 0.2rem 0.6rem 0.25rem;
+	box-sizing: border-box;
+}
+
+.feature .page .item-one {
+	border-bottom: 0.01rem solid #fff;
+	height: 3.85rem;
+}
+
+.feature .page .item h2 {
+	font-size: 0.36rem;
+	font-family: "方正准黑简体";
+	color: #fff100;
+	text-align: center;
+	font-weight: bold;
+	word-spacing: 0.08rem;
+	letter-spacing: 0.02rem;
+	height: 0.7rem;
+	border-bottom: 0.01rem solid #fff;
+}
+
+.feature .page .item-one h2 {
+	font-size: 0.36rem;
+	font-family: "方正正纤黑简体";
+	color: #fff;
+	border: none;
+	text-align: left;
+	padding-top: 0.19rem;
+}
+
+.feature .page .item-one .present div {
+	display: inline-block;
+	padding: 0 0.08rem;
+}
+
+.feature .page .item-one img {
+	width: 1.75rem;
+	height: 1.75rem;
+}
+
+.feature .page .item-one {
+	position: relative;
+}
+
+.feature .page .item-one .present {
+	position: absolute;
+	top: 0.36rem;
+	left: 1.3rem;
+}
+
+.feature .page .item-one p {
+	width: 1.98rem;
+	text-align: center;
+	font-size: 0.24rem;
+	font-family: "方正正纤黑简体";
+	color: #fff;
+	padding-top: 0.1rem;
+}
+
+.feature .page .item-one .present .plus {
+	font-size: 0.5rem;
+	color: #fff;
+	position: absolute;
+	top: 0.72rem;
+	left: 1.82rem;
+}
+
+.feature .page .item-one .spe {
+	width: 1.46rem;
+	text-align: center;
+	padding-left: 0.1rem;
+}
+
+.feature .page .item-one .bottom {
+	position: absolute;
+	top: 3.1rem;
+	left: 1rem;
+}
+
+.feature .page .item-one .bottom div {
+	display: inline-block;
+	font-size: 0.24rem;
+	font-family: "方正正中黑简体";
+	color: #fff100;
+	height: 0.56rem;
+	line-height: 0.56rem;
+}
+
+.feature .page .item-one .bottom img {
+	width: 1.6rem;
+	height: 0.56rem;
+}
+
+.feature .page .item-one .bottom .spe {
+	padding-right: 0.34rem;
+}
+
+.feature .page .item-one .bottom div span {
+	font-size: 0.28rem;
+	font-family: "方正正中黑简体";
+}
+.feature .page .item-one .conduct-1 {
+	width: 1.48rem;
+}
+.feature .page .item-one .bottom .buy a img{
+	margin-left: 10px;
+}
+.feature .page .item-one .conduct-2 {
+	width: 2.03rem;
+}
+
+.feature .page .item-one .present .item-li {
+	margin-left: 0.2rem
+}
+
+.feature .page .item-one .present1 {
+	position: absolute;
+	top: 0.65rem;
+	left: 0.23rem;
+}
+
+.feature .page .item-one .present1 img {
+	width: 1.7rem;
+	height: 1.7rem;
+}
+
+.feature .page .item-one .present .plus2 {
+	font-size: 0.5rem;
+	color: #fff;
+	position: absolute;
+	top: 0.72rem;
+	left: 4rem;
+}
+
+.feature .page .item-one .conduct-3 {
+	width: 1.75rem;
+}
+
+.feature .page .item-one .conduct-4 {
+	width: 2.03rem;
+}
+
+.feature .page #item-two {
+	border: none;
+}
+
+.feature .page .item-one .present1 img.spe {
+	padding-left: 0.15rem;
+}
+
+.feature .page .item-one #bottom1 {
+	position: absolute;
+	top: 3.3rem;
+	left: 1rem;
+}
+
+
